@@ -7,7 +7,7 @@ const bp = require('body-parser')
 mongoose.set('strictQuery', false);
 const app = express()
 
-app.use(UserRouter,bp.json())
+app.use(UserRouter,bp.json())             // middleware userRouter is used here to bridge between the techno,dbs into a single document
 
 mongoose.connect(mongoDB, (err)=> {
     if(err) {
